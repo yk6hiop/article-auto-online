@@ -3,7 +3,10 @@ from __future__ import annotations
 import copy
 import json
 import os
+from pathlib import Path
 from typing import Any
+
+from .config import ONLINE_APP_DATA_DIR, PROJECT_ROOT
 
 
 def apply_environment_overrides(core: Any) -> Any:
@@ -27,8 +30,37 @@ def apply_environment_overrides(core: Any) -> Any:
     if site_overrides:
         _apply_site_overrides(core, site_overrides)
 
+    _apply_path_overrides(core)
+
     core._ONLINE_ENV_OVERRIDES_APPLIED = True
     return core
+
+
+def _apply_path_overrides(core: Any) -> None:
+    """公開環境ではWindowsローカルのGドライブではなく、コンテナ内のパスへ向ける。"""
+    data_dir = Path(os.environ.get("ONLINE_APP_DATA_DIR", str(ONLINE_APP_DATA_DIR))).resolve()
+    project_root = Path(os.environ.get("ONLINE_PROJECT_ROOT", str(PROJECT_ROOT))).resolve()
+    output_root = data_dir / "記事生成結果"
+    work_results = output_root / "作業結果"
+    resume_dir = data_dir / "resume_data"
+
+    for path in (data_dir, output_root, work_results, resume_dir):
+        path.mkdir(parents=True, exist_ok=True)
+
+    core.BASE_DIR = str(project_root)
+    core.PROMPT_BASE_DIR = str(project_root / "prompts")
+    core.GOOGLE_DRIVE_BASE = str(output_root)
+    core.UNIFIED_OUTPUT_DIR = str(work_results)
+    core.LEGACY_AI_STUDIO_PROMPTS_DIR = str(output_root / "ai_studio_prompts")
+    core.AI_STUDIO_PROMPTS_DIR = str(work_results)
+    core.STEP9_10_RESULTS_DIR = str(work_results)
+    core.RESUME_DIR = str(resume_dir)
+    core.RESUME_NORMAL = str(data_dir / "resume_normal.json")
+    core.RESUME_MOECHIN = str(data_dir / "resume_moechin.json")
+    core.RESEARCH_FILE = str(data_dir / f"research_{getattr(core, 'PC_IDENTIFIER', 'ONLINE')}.txt")
+    core.STEP9_META_FILE = str(data_dir / "step9_meta.txt")
+    core.STEP10_FILE = str(data_dir / "step10.txt")
+    core.REVIEWER_MASTER_FILE = str(data_dir / "reviewer_master.json")
 
 
 def _json_list_env(name: str) -> list[dict[str, str]]:

@@ -8,9 +8,9 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 ONLINE_APP_DATA_DIR = Path(os.environ.get("ONLINE_APP_DATA_DIR", PROJECT_ROOT / "online_app_data"))
 if not ONLINE_APP_DATA_DIR.is_absolute():
     ONLINE_APP_DATA_DIR = PROJECT_ROOT / ONLINE_APP_DATA_DIR
-RESUME_DIR = PROJECT_ROOT / "resume_data"
-PARENT_LOGS_DIR = PROJECT_ROOT / "記事生成結果" / "親記事" / "logs"
-WORK_RESULTS_DIR = PROJECT_ROOT / "記事生成結果" / "作業結果"
+RESUME_DIR = ONLINE_APP_DATA_DIR / "resume_data"
+PARENT_LOGS_DIR = ONLINE_APP_DATA_DIR / "記事生成結果" / "親記事" / "logs"
+WORK_RESULTS_DIR = ONLINE_APP_DATA_DIR / "記事生成結果" / "作業結果"
 PROMPT_BASE_DIR = PROJECT_ROOT / "prompts"
 
 
