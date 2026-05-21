@@ -1,0 +1,49 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# ローカル生成物・巨大ファイル
+記事生成結果/
+resume_data/
+resume_*.json
+*.disabled_*.json
+online_app_data/
+outputs/
+backups/
+memory/
+research_*.txt
+*_log.txt
+_anken_edit_temp.txt
+
+# オンライン版v0の公開対象外にする旧ツール・別系統ツール
+auto_post_child.py
+auto_post_child_moechin.py
+auto_post_child_normal.py
+auto_post_final.py
+auto_post_moechin.py
+auto_post_normal.py
+auto_post_vertex_v2.py
+step9_10_processor.py
+schedule_updater/
+claude_plugins_backup/
+ディープリサーチツール用/
+prompts/**/auto_post*.py
+
+# 認証・トークン
+local_private_config.json
+*_token.json
+_anken_gspread_token.json
+_deep_research_drive_token.json
+client_secret*.json
+*.env
+.env
+
+# ローカル端末設定・ショートカット
+pc_config.txt
+*.lnk
+
+# 開発用一時ファイル
+debug_log.txt
+bakusai_log.txt
+tmp_*.py
+auto_post_unified.py.backup*

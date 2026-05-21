@@ -1,0 +1,122 @@
+# step08: HTML変換（簡略版 for Groq）
+
+Markdown形式の記事をHTML形式に変換してください。
+
+## 変換ルール
+
+### 1. 基本変換
+- `# H1` → `<h1>H1</h1>`
+- `## H2` → `<h2>H2</h2>`
+- `### H3` → `<h3>H3</h3>`
+- 段落 → `<p>...</p>`
+- `**太字**` → `<strong>太字</strong>`
+
+### 2. FAQ形式（重要）
+以下の固定パターンを厳守：
+
+```html
+<h2>よくある質問</h2>
+<h3>Q. 質問内容?</h3>
+<p>A. 回答内容</p>
+<h3>Q. 質問内容?</h3>
+<p>A. 回答内容</p>
+```
+
+**禁止パターン:**
+- `<p><strong>Q1. 質問</strong></p>`（Q1は使わない、Qで統一）
+- `<h3>Q. 質問</h3> A. 回答`（Aはpタグで囲む）
+
+### 3. 表の変換
+Markdown表 → HTMLテーブル:
+
+```html
+<table style="width:100%; border-collapse: collapse;">
+<thead>
+<tr style="background-color:#f2f2f2;">
+<th style="padding: 8px; border: 1px solid #ddd;">項目</th>
+<th style="padding: 8px; border: 1px solid #ddd;">A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 8px; border: 1px solid #ddd;">内容</td>
+<td style="padding: 8px; border: 1px solid #ddd;">内容</td>
+</tr>
+</tbody>
+</table>
+```
+
+### 4. 引用・出典
+```html
+<blockquote>
+引用文
+</blockquote>
+<cite>出典: <a href="URL">タイトル</a> - 発行元</cite>
+```
+
+### 5. リストの変換
+```html
+<ul>
+<li>項目1</li>
+<li>項目2</li>
+</ul>
+```
+
+### 6. 必須要素の追加
+
+**冒頭に追加:**
+```html
+<h1>タイトル</h1>
+<hr>
+[publishpress_authors_box author_categories="author" layout="ppma_boxes_774"]
+[publishpress_authors_box author_categories="reviewer" layout="ppma_boxes_775" show_title="false"]
+```
+
+**参考文献は以下の形式:**
+```html
+<h2>参考文献</h2>
+<ul>
+<li><blockquote>タイトル</blockquote>
+<cite>出典: 発行元 - 年（確認日）</cite></li>
+</ul>
+```
+
+## 削除要素
+
+以下は削除してください：
+- `[AI要約]` などのメタメッセージ
+- `[図解提案]` などの内部指示
+- `**【修正指示】**` などの編集メモ
+
+## 出力形式
+
+```html
+<h1>タイトル</h1>
+
+<p>リード文...</p>
+
+<hr>
+[publishpress_authors_box author_categories="author" layout="ppma_boxes_774"]
+[publishpress_authors_box author_categories="reviewer" layout="ppma_boxes_775" show_title="false"]
+
+<h2>H2見出し</h2>
+<p>本文...</p>
+
+...
+
+<h2>よくある質問</h2>
+<h3>Q. 質問?</h3>
+<p>A. 回答</p>
+
+<h2>まとめ</h2>
+<p>本文...</p>
+
+<h2>参考文献</h2>
+<ul>
+<li><blockquote>タイトル</blockquote>
+<cite>出典: 発行元 - 年</cite></li>
+</ul>
+```
+
+## INPUT
+- 修正済みの記事全文（Markdown形式）

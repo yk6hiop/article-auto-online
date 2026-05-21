@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: article-automation-online
+    env: docker
+    plan: starter
+    healthCheckPath: /healthz
+    autoDeploy: false
+    disk:
+      name: online-app-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: ONLINE_APP_DATA_DIR
+        value: /var/data
+      - key: ONLINE_APP_STALE_RUNNING_MINUTES
+        value: "180"
+      - key: SEARCHAPI_API_KEY
+        sync: false
+      - key: ONLINE_GEMINI_KEYS_NORMAL_JSON
+        sync: false
+      - key: ONLINE_GEMINI_KEYS_MOECHIN_JSON
+        sync: false
+      - key: ONLINE_WP_SITE_OVERRIDES_JSON
+        sync: false

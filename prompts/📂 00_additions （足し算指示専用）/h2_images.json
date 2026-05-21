@@ -1,0 +1,1500 @@
+{
+  "_meta": {
+    "description": "全サイト共通 H2見出し直下画像プール",
+    "usage": "足し算Prompt生成時に自動読み込み。Geminiが記事のH2見出しとkeywordsを照合して最適な画像を選択・挿入する。",
+    "how_to_add": "新しい画像を追加するには、このJSONの images 配列に {keywords:[...], url:\"...\", source:\"サイト名\"} を追記するだけ。",
+    "note_on_shortage": "足し算Prompt実行時にH2見出し数 > 利用可能画像数の場合、Geminiは不足分のH2に画像を挿入しない（エラーにはならない）。ジェネレーターは不足を検知して追加画像の提案メッセージを表示する。",
+    "schema_note": "source=サイト名、addition_file/addition_key=足し算Prompt紐づけ、genre/genre_label=画像セット分類。未設定の既存画像も後方互換で利用可能。"
+  },
+  "images": [
+    {
+      "keywords": [
+        "悩み",
+        "不安",
+        "つらい",
+        "ED",
+        "もしかして"
+      ],
+      "url": "https://byouin-sagashi.com/wp-content/uploads/2025/09/Image_fx-6-1-2-1024x559.jpg",
+      "source": "病院探し"
+    },
+    {
+      "keywords": [
+        "医学",
+        "原因",
+        "メカニズム",
+        "科学",
+        "血管"
+      ],
+      "url": "https://byouin-sagashi.com/wp-content/uploads/2025/09/Image_fx-7-1-1-1024x559.jpg",
+      "source": "病院探し"
+    },
+    {
+      "keywords": [
+        "生活習慣",
+        "運動",
+        "食事",
+        "改善",
+        "体質"
+      ],
+      "url": "https://byouin-sagashi.com/wp-content/uploads/2025/09/Image_fx-8-1-1-1024x559.jpg",
+      "source": "病院探し"
+    },
+    {
+      "keywords": [
+        "危険",
+        "警告",
+        "偽造",
+        "個人輸入",
+        "違法"
+      ],
+      "url": "https://byouin-sagashi.com/wp-content/uploads/2025/09/Image_fx-9-1-2-1024x559.jpg",
+      "source": "病院探し"
+    },
+    {
+      "keywords": [
+        "相談",
+        "オンライン",
+        "専門家",
+        "診療",
+        "病院"
+      ],
+      "url": "https://byouin-sagashi.com/wp-content/uploads/2025/09/Image_fx-10-1-1-1024x559.jpg",
+      "source": "病院探し"
+    },
+    {
+      "keywords": [
+        "使い方",
+        "服用",
+        "副作用",
+        "医薬品",
+        "安全"
+      ],
+      "url": "https://byouin-sagashi.com/wp-content/uploads/2025/09/Image_fx-11-1-1-1024x559.jpg",
+      "source": "病院探し"
+    },
+    {
+      "keywords": [
+        "希望",
+        "回復",
+        "まとめ",
+        "自信",
+        "パートナー"
+      ],
+      "url": "https://byouin-sagashi.com/wp-content/uploads/2025/09/Image_fx-12-1-1024x559.jpg",
+      "source": "病院探し"
+    },
+    {
+      "keywords": [
+        "婚活",
+        "期待",
+        "不安",
+        "一歩",
+        "始める"
+      ],
+      "url": "https://www.marriage-mr.com/wp-content/uploads/2025/09/Image_fx-14-1.jpg",
+      "source": "結びのマリッジ"
+    },
+    {
+      "keywords": [
+        "戦略",
+        "仕組み",
+        "計画",
+        "準備",
+        "分析"
+      ],
+      "url": "https://www.marriage-mr.com/wp-content/uploads/2025/09/Image_fx-15-1.jpg",
+      "source": "結びのマリッジ"
+    },
+    {
+      "keywords": [
+        "プロ",
+        "サポート",
+        "カウンセラー",
+        "相談",
+        "信頼"
+      ],
+      "url": "https://www.marriage-mr.com/wp-content/uploads/2025/09/Image_fx-16-1-1.jpg",
+      "source": "結びのマリッジ"
+    },
+    {
+      "keywords": [
+        "お見合い",
+        "出会い",
+        "初対面",
+        "成功",
+        "デート"
+      ],
+      "url": "https://www.marriage-mr.com/wp-content/uploads/2025/09/Image_fx-17-1-1.jpg",
+      "source": "結びのマリッジ"
+    },
+    {
+      "keywords": [
+        "比較",
+        "検討",
+        "選択",
+        "多様",
+        "方法"
+      ],
+      "url": "https://www.marriage-mr.com/wp-content/uploads/2025/09/Image_fx-18-1.jpg",
+      "source": "結びのマリッジ"
+    },
+    {
+      "keywords": [
+        "料金",
+        "プラン",
+        "透明性",
+        "費用",
+        "価格"
+      ],
+      "url": "https://www.marriage-mr.com/wp-content/uploads/2025/09/Image_fx-19-1.jpg",
+      "source": "結びのマリッジ"
+    },
+    {
+      "keywords": [
+        "幸せ",
+        "未来",
+        "パートナーシップ",
+        "理想",
+        "結婚",
+        "default_image"
+      ],
+      "url": "https://www.marriage-mr.com/wp-content/uploads/2025/09/Image_fx-21-1.jpg",
+      "source": "結びのマリッジ"
+    },
+    {
+      "keywords": [
+        "学び",
+        "第一歩",
+        "新しい",
+        "スタート",
+        "挑戦"
+      ],
+      "url": "https://learnbiz.jp/wp-content/uploads/2025/09/Image_fx-22-1-1024x559.jpg",
+      "source": "LearnBiz"
+    },
+    {
+      "keywords": [
+        "内省",
+        "声",
+        "直感",
+        "瞑想",
+        "気づき"
+      ],
+      "url": "https://learnbiz.jp/wp-content/uploads/2025/09/Image_fx-23-1-1024x559.jpg",
+      "source": "LearnBiz"
+    },
+    {
+      "keywords": [
+        "経済",
+        "自立",
+        "収入",
+        "副業",
+        "ビジネス"
+      ],
+      "url": "https://learnbiz.jp/wp-content/uploads/2025/09/Image_fx-24-1-1024x559.jpg",
+      "source": "LearnBiz"
+    },
+    {
+      "keywords": [
+        "仲間",
+        "繋がり",
+        "成長",
+        "コミュニティ",
+        "協力"
+      ],
+      "url": "https://learnbiz.jp/wp-content/uploads/2025/09/Image_fx-25-1-1024x559.jpg",
+      "source": "LearnBiz"
+    },
+    {
+      "keywords": [
+        "自然",
+        "エネルギー",
+        "充電",
+        "リフレッシュ",
+        "休息"
+      ],
+      "url": "https://learnbiz.jp/wp-content/uploads/2025/09/Image_fx-26-1-1024x559.jpg",
+      "source": "LearnBiz"
+    },
+    {
+      "keywords": [
+        "論理",
+        "思考",
+        "分析",
+        "判断",
+        "知識"
+      ],
+      "url": "https://learnbiz.jp/wp-content/uploads/2025/09/Image_fx-27-1-1024x559.jpg",
+      "source": "LearnBiz"
+    },
+    {
+      "keywords": [
+        "羅針盤",
+        "未来",
+        "方向",
+        "目標",
+        "ビジョン"
+      ],
+      "url": "https://learnbiz.jp/wp-content/uploads/2025/09/Image_fx-28-1-1024x559.jpg",
+      "source": "LearnBiz"
+    },
+    {
+      "keywords": [
+        "目標設定",
+        "計画",
+        "未来"
+      ],
+      "url": "https://learnbiz.jp/wp-content/uploads/2025/10/Image_fx-11-1-1-1024x559.jpg",
+      "source": "LearnBiz"
+    },
+    {
+      "keywords": [
+        "学習",
+        "自己投資",
+        "読書"
+      ],
+      "url": "https://learnbiz.jp/wp-content/uploads/2025/10/Image_fx-12-1-1-1024x559.jpg",
+      "source": "LearnBiz"
+    },
+    {
+      "keywords": [
+        "挑戦",
+        "ブレークスルー",
+        "突破"
+      ],
+      "url": "https://learnbiz.jp/wp-content/uploads/2025/10/Image_fx-13-1024x559.png",
+      "source": "LearnBiz"
+    },
+    {
+      "keywords": [
+        "マインドフルネス",
+        "内省",
+        "集中"
+      ],
+      "url": "https://learnbiz.jp/wp-content/uploads/2025/10/Image_fx-14-1-1024x559.jpg",
+      "source": "LearnBiz"
+    },
+    {
+      "keywords": [
+        "成功",
+        "達成感",
+        "喜び"
+      ],
+      "url": "https://learnbiz.jp/wp-content/uploads/2025/10/Image_fx-16-1-2-1024x559.jpg",
+      "source": "LearnBiz"
+    },
+    {
+      "keywords": [
+        "人との繋がり",
+        "協力",
+        "チーム"
+      ],
+      "url": "https://learnbiz.jp/wp-content/uploads/2025/10/Image_fx-17-1-2-1024x559.jpg",
+      "source": "LearnBiz"
+    },
+    {
+      "keywords": [
+        "ワークライフバランス",
+        "理想",
+        "充実"
+      ],
+      "url": "https://learnbiz.jp/wp-content/uploads/2025/10/Image_fx-18-1-1024x559.jpg",
+      "source": "LearnBiz"
+    },
+    {
+      "keywords": [
+        "トラブル",
+        "困惑",
+        "突然",
+        "故障",
+        "壊れた"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2025/09/Image_fx-29-1-1024x559.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "電話",
+        "相談",
+        "安堵",
+        "業者",
+        "問い合わせ"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2025/09/Image_fx-30-1-1024x559.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "作業員",
+        "信頼",
+        "説明",
+        "夫婦",
+        "プロ"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2025/09/Image_fx-31-1-1024x559.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "新品",
+        "交換",
+        "設置",
+        "家族",
+        "幸せ"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2025/09/Image_fx-32-1-1024x559.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "費用",
+        "補助金",
+        "見積もり",
+        "納得",
+        "料金"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2025/09/Image_fx-33-1-1024x559.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "快適",
+        "満足",
+        "お風呂",
+        "温かい",
+        "完了"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2025/09/Image_fx-34-1-1024x559.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "迅速",
+        "対応",
+        "感謝",
+        "スピード",
+        "駆けつけ"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2025/09/Image_fx-35-1-1024x559.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "臭い",
+        "汚れ",
+        "不快",
+        "エアコン",
+        "カビ"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2025/10/Image_fx-4-1-2-1024x559.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "健康",
+        "家族",
+        "懸念",
+        "アレルギー",
+        "子供"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2025/10/Image_fx-5-1-1-1024x559.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "プロ",
+        "安心",
+        "クリーニング",
+        "洗浄"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2025/10/Image_fx-6-1-1-1024x559.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "専門",
+        "分解",
+        "技術",
+        "内部洗浄"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2025/10/Image_fx-7-1-1-1024x559.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "爽快",
+        "清潔",
+        "空気",
+        "きれい"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2025/10/Image_fx-8-1-1-1024x559.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "節電",
+        "経済的",
+        "メリット",
+        "電気代"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2025/10/Image_fx-9-1-1-1024x559.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "清潔",
+        "空間",
+        "家族",
+        "幸せ",
+        "時間"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2025/10/Image_fx-10-1-1024x559.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "水漏れ",
+        "発見",
+        "絶望",
+        "つまり"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/01/Image_fx-1-1-1024x576.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "緊急",
+        "業者探し",
+        "焦り"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/01/Image_fx-2-1-1024x576.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "電話受付",
+        "安堵",
+        "受付"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/01/Image_fx-3-1-1024x576.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "到着",
+        "プロ",
+        "希望"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/01/Image_fx-5-1024x576.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "診断",
+        "原因究明",
+        "専門家"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/01/Image_fx-6-1-1024x576.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "透明性",
+        "料金",
+        "事前説明"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/01/Image_fx-10-1024x576.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "技術力",
+        "丁寧",
+        "修理"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/01/Image_fx-7-1-1024x576.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "解決",
+        "解放",
+        "修理完了"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/01/Image_fx-11-1024x576.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "満足",
+        "サービス",
+        "感謝"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/01/Image_fx-8-1-1024x576.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "平穏",
+        "暮らし",
+        "日常",
+        "取り戻す"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/01/Image_fx-9-1024x576.jpg",
+      "source": "便利屋"
+    },
+    {
+      "keywords": [
+        "査定",
+        "未来",
+        "期待",
+        "売却",
+        "レコード"
+      ],
+      "url": "https://jazzmistake.com/wp-content/uploads/2025/09/Image_fx-37-1-1-1024x559.jpg",
+      "source": "ジャズ"
+    },
+    {
+      "keywords": [
+        "専門",
+        "査定",
+        "安心",
+        "鑑定"
+      ],
+      "url": "https://jazzmistake.com/wp-content/uploads/2025/09/Image_fx-38-1-1024x559.jpg",
+      "source": "ジャズ"
+    },
+    {
+      "keywords": [
+        "梱包",
+        "丁寧",
+        "発送",
+        "準備"
+      ],
+      "url": "https://jazzmistake.com/wp-content/uploads/2025/09/Image_fx-39-1-1024x559.jpg",
+      "source": "ジャズ"
+    },
+    {
+      "keywords": [
+        "喜び",
+        "結果",
+        "高値",
+        "買取"
+      ],
+      "url": "https://jazzmistake.com/wp-content/uploads/2025/09/Image_fx-40-1-1024x559.jpg",
+      "source": "ジャズ"
+    },
+    {
+      "keywords": [
+        "スッキリ",
+        "片付け",
+        "空間",
+        "整理"
+      ],
+      "url": "https://jazzmistake.com/wp-content/uploads/2025/09/Image_fx-41-1-1024x559.jpg",
+      "source": "ジャズ"
+    },
+    {
+      "keywords": [
+        "思い出",
+        "共有",
+        "語り合う",
+        "音楽"
+      ],
+      "url": "https://jazzmistake.com/wp-content/uploads/2025/09/Image_fx-42-1-1024x559.jpg",
+      "source": "ジャズ"
+    },
+    {
+      "keywords": [
+        "感謝",
+        "継承",
+        "次世代",
+        "大切"
+      ],
+      "url": "https://jazzmistake.com/wp-content/uploads/2025/09/Image_fx-44-1-1024x559.jpg",
+      "source": "ジャズ"
+    },
+    {
+      "keywords": [
+        "納得",
+        "査定",
+        "車",
+        "見積もり"
+      ],
+      "url": "http://kurumanoen.com/wp-content/uploads/2025/09/Image_fx-45-1-1024x559.jpg",
+      "source": "くるまの縁"
+    },
+    {
+      "keywords": [
+        "未来",
+        "期待",
+        "新車",
+        "楽しみ"
+      ],
+      "url": "http://kurumanoen.com/wp-content/uploads/2025/09/Image_fx-46-1-1024x559.jpg",
+      "source": "くるまの縁"
+    },
+    {
+      "keywords": [
+        "手続き",
+        "スムーズ",
+        "書類",
+        "契約"
+      ],
+      "url": "http://kurumanoen.com/wp-content/uploads/2025/09/Image_fx-47-1-1024x559.jpg",
+      "source": "くるまの縁"
+    },
+    {
+      "keywords": [
+        "情報",
+        "収集",
+        "発見",
+        "調査"
+      ],
+      "url": "http://kurumanoen.com/wp-content/uploads/2025/09/Image_fx-48-1-1024x559.jpg",
+      "source": "くるまの縁"
+    },
+    {
+      "keywords": [
+        "専門家",
+        "信頼",
+        "ディーラー",
+        "相談"
+      ],
+      "url": "http://kurumanoen.com/wp-content/uploads/2025/09/Image_fx-49-1-1024x559.jpg",
+      "source": "くるまの縁"
+    },
+    {
+      "keywords": [
+        "愛車",
+        "感謝",
+        "思い出",
+        "大切"
+      ],
+      "url": "http://kurumanoen.com/wp-content/uploads/2025/09/Image_fx-50-1-1024x559.jpg",
+      "source": "くるまの縁"
+    },
+    {
+      "keywords": [
+        "問題解決",
+        "安堵",
+        "修理",
+        "故障"
+      ],
+      "url": "http://kurumanoen.com/wp-content/uploads/2025/09/Image_fx-51-1-1024x559.jpg",
+      "source": "くるまの縁"
+    },
+    {
+      "keywords": [
+        "恋愛",
+        "悩み",
+        "スマホ",
+        "片思い"
+      ],
+      "url": "https://uranai1.xsrv.jp/wp-content/uploads/2025/11/Image_fx-1.jpg",
+      "source": "占いの手引書"
+    },
+    {
+      "keywords": [
+        "人間関係",
+        "孤独",
+        "物思い",
+        "寂しさ"
+      ],
+      "url": "https://uranai1.xsrv.jp/wp-content/uploads/2025/11/Image_fx-2-1.jpg",
+      "source": "占いの手引書"
+    },
+    {
+      "keywords": [
+        "仕事",
+        "プレッシャー",
+        "ストレス",
+        "疲れ"
+      ],
+      "url": "https://uranai1.xsrv.jp/wp-content/uploads/2025/11/Image_fx-3-1.jpg",
+      "source": "占いの手引書"
+    },
+    {
+      "keywords": [
+        "将来",
+        "不安",
+        "漠然",
+        "迷い"
+      ],
+      "url": "https://uranai1.xsrv.jp/wp-content/uploads/2025/11/Image_fx-5-1.jpg",
+      "source": "占いの手引書"
+    },
+    {
+      "keywords": [
+        "比較",
+        "検討",
+        "サービス",
+        "選ぶ"
+      ],
+      "url": "https://uranai1.xsrv.jp/wp-content/uploads/2025/11/Image_fx-6-1.jpg",
+      "source": "占いの手引書"
+    },
+    {
+      "keywords": [
+        "電話",
+        "初めて",
+        "勇気",
+        "一歩"
+      ],
+      "url": "https://uranai1.xsrv.jp/wp-content/uploads/2025/11/Image_fx-7-1.jpg",
+      "source": "占いの手引書"
+    },
+    {
+      "keywords": [
+        "鑑定",
+        "癒やし",
+        "ほぐれる",
+        "安心"
+      ],
+      "url": "https://uranai1.xsrv.jp/wp-content/uploads/2025/11/Image_fx-8-1.jpg",
+      "source": "占いの手引書"
+    },
+    {
+      "keywords": [
+        "占い師",
+        "信頼",
+        "人物",
+        "先生"
+      ],
+      "url": "https://uranai1.xsrv.jp/wp-content/uploads/2025/11/Image_fx-9-1.jpg",
+      "source": "占いの手引書"
+    },
+    {
+      "keywords": [
+        "タロット",
+        "カード",
+        "鑑定",
+        "占術"
+      ],
+      "url": "https://uranai1.xsrv.jp/wp-content/uploads/2025/11/Image_fx-10-1.jpg",
+      "source": "占いの手引書"
+    },
+    {
+      "keywords": [
+        "霊視",
+        "スピリチュアル",
+        "霊感",
+        "透視"
+      ],
+      "url": "https://uranai1.xsrv.jp/wp-content/uploads/2025/11/Image_fx-12-1.jpg",
+      "source": "占いの手引書"
+    },
+    {
+      "keywords": [
+        "都市",
+        "占い館",
+        "繁華街",
+        "店舗"
+      ],
+      "url": "https://uranai1.xsrv.jp/wp-content/uploads/2025/11/Image_fx-13-1.jpg",
+      "source": "占いの手引書"
+    },
+    {
+      "keywords": [
+        "歴史",
+        "街並み",
+        "伝統",
+        "古都"
+      ],
+      "url": "https://uranai1.xsrv.jp/wp-content/uploads/2025/11/Image_fx-14-1.jpg",
+      "source": "占いの手引書"
+    },
+    {
+      "keywords": [
+        "地方",
+        "温かみ",
+        "田舎",
+        "地域"
+      ],
+      "url": "https://uranai1.xsrv.jp/wp-content/uploads/2025/11/Image_fx-21-1.jpg",
+      "source": "占いの手引書"
+    },
+    {
+      "keywords": [
+        "視界",
+        "開ける",
+        "気づき",
+        "発見"
+      ],
+      "url": "https://uranai1.xsrv.jp/wp-content/uploads/2025/11/Image_fx-16-1.jpg",
+      "source": "占いの手引書"
+    },
+    {
+      "keywords": [
+        "前向き",
+        "一歩",
+        "行動",
+        "決意"
+      ],
+      "url": "https://uranai1.xsrv.jp/wp-content/uploads/2025/11/Image_fx-22-1.jpg",
+      "source": "占いの手引書"
+    },
+    {
+      "keywords": [
+        "友人",
+        "楽しい",
+        "会話",
+        "笑顔"
+      ],
+      "url": "https://uranai1.xsrv.jp/wp-content/uploads/2025/11/Image_fx-17-1.jpg",
+      "source": "占いの手引書"
+    },
+    {
+      "keywords": [
+        "男性",
+        "恋愛",
+        "悩み",
+        "考える"
+      ],
+      "url": "https://uranai1.xsrv.jp/wp-content/uploads/2025/11/Image_fx-19-1.jpg",
+      "source": "占いの手引書"
+    },
+    {
+      "keywords": [
+        "パートナー",
+        "関係改善",
+        "夫婦",
+        "恋人"
+      ],
+      "url": "https://uranai1.xsrv.jp/wp-content/uploads/2025/11/Image_fx-20-1.jpg",
+      "source": "占いの手引書"
+    },
+    {
+      "keywords": [
+        "受付",
+        "入店",
+        "予約",
+        "フロント",
+        "初めて",
+        "流れ",
+        "システム",
+        "default_image"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-2-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "カウンセリング",
+        "ヒアリング",
+        "相談",
+        "会話",
+        "コース決め"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-3-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "シャワー",
+        "入浴",
+        "清潔",
+        "着替え",
+        "準備"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "個室",
+        "部屋",
+        "ベッド",
+        "案内",
+        "雰囲気",
+        "default_image"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-1-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "マッサージ",
+        "施術",
+        "オイル",
+        "技術",
+        "default_image"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-2-1-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "密着",
+        "ドキドキ",
+        "興奮",
+        "距離",
+        "接触"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-4-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "ストレッチ",
+        "身体",
+        "柔軟",
+        "運動"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-5-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "休憩",
+        "水",
+        "ドリンク",
+        "リラックス"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-6-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "会計",
+        "料金",
+        "支払い",
+        "コスパ"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-7-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "退店",
+        "帰り",
+        "見送り",
+        "挨拶"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-10-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "OL",
+        "オフィス",
+        "スーツ",
+        "職場"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-12-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "ナース",
+        "看護師",
+        "白衣",
+        "病院"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-13-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "チャイナ",
+        "異国",
+        "アジアン"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-14-1-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "浴衣",
+        "和風",
+        "温泉",
+        "旅館"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-15-1-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "彼シャツ",
+        "Yシャツ",
+        "素肌",
+        "朝"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-16-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "パーカー",
+        "部屋着",
+        "ルームウェア",
+        "くつろぎ"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-17-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "メイド",
+        "奉仕",
+        "ご主人様"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-18-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "ヨガ",
+        "スポーティ",
+        "フィットネス",
+        "健康"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-19-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "ニット",
+        "冬",
+        "暖かい",
+        "季節"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-20-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "キャミ",
+        "ランジェリー",
+        "薄着",
+        "セクシー"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-21-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "清楚",
+        "黒髪",
+        "純粋",
+        "新人",
+        "学生"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-22-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "ギャル",
+        "派手",
+        "明るい",
+        "若い"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-23-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "お姉さん",
+        "熟女",
+        "包容力",
+        "大人",
+        "癒やし"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-24-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "ショート",
+        "活発",
+        "元気",
+        "ボーイッシュ"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-25-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "恥じらい",
+        "照れ",
+        "初々しい",
+        "緊張"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-26-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "上目遣い",
+        "おねだり",
+        "甘え",
+        "誘惑"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-27-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "Sっ気",
+        "クール",
+        "女王",
+        "強気"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-28-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "寝顔",
+        "無防備",
+        "リラックス",
+        "安心"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-29-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "爆笑",
+        "笑い",
+        "楽しい",
+        "ハッピー"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-30-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "秘密",
+        "内緒",
+        "裏",
+        "ここだけ",
+        "限定"
+      ],
+      "url": "http://www.moechin.com/wp-content/uploads/2025/12/Image_fx-31-1024x576.jpg",
+      "source": "もえちん"
+    },
+    {
+      "keywords": [
+        "テレビ",
+        "映らない",
+        "リモコン",
+        "E202",
+        "アンテナ",
+        "故障",
+        "不安",
+        "相談"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/05/Woman_operating_TV_remote_202605141040_wp_1778725589.jpg",
+      "source": "便利屋",
+      "genre": "antenna",
+      "genre_label": "アンテナ工事",
+      "addition_file": "街角アンテナ工事相談所.txt",
+      "addition_key": "街角アンテナ工事相談所",
+      "memo": "テレビトラブル・悩み",
+      "created_at": "2026-05-14 11:26:31"
+    },
+    {
+      "keywords": [
+        "現地調査",
+        "電波調査",
+        "見積もり",
+        "スタッフ",
+        "住宅",
+        "外壁",
+        "相談",
+        "アンテナ工事"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/05/Woman_operating_TV_remote_202605141047_wp_1778725591.jpg",
+      "source": "便利屋",
+      "genre": "antenna",
+      "genre_label": "アンテナ工事",
+      "addition_file": "街角アンテナ工事相談所.txt",
+      "addition_key": "街角アンテナ工事相談所",
+      "memo": "専門スタッフによる現地調査",
+      "created_at": "2026-05-14 11:26:33"
+    },
+    {
+      "keywords": [
+        "アンテナ設置",
+        "屋根",
+        "工事",
+        "作業員",
+        "安全帯",
+        "テレビアンテナ",
+        "施工",
+        "技術"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/05/Woman_operating_TV_remote_202605141052_wp_1778725593.jpg",
+      "source": "便利屋",
+      "genre": "antenna",
+      "genre_label": "アンテナ工事",
+      "addition_file": "街角アンテナ工事相談所.txt",
+      "addition_key": "街角アンテナ工事相談所",
+      "memo": "アンテナ設置作業",
+      "created_at": "2026-05-14 11:26:34"
+    },
+    {
+      "keywords": [
+        "デザインアンテナ",
+        "外壁",
+        "設置例",
+        "住宅外観",
+        "配線",
+        "アンテナ種類",
+        "施工",
+        "見た目"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/05/202605141056_wp_1778725594.jpg",
+      "source": "便利屋",
+      "genre": "antenna",
+      "genre_label": "アンテナ工事",
+      "addition_file": "街角アンテナ工事相談所.txt",
+      "addition_key": "街角アンテナ工事相談所",
+      "memo": "デザインアンテナの設置例",
+      "created_at": "2026-05-14 11:26:35"
+    },
+    {
+      "keywords": [
+        "即日対応",
+        "駆けつけ",
+        "作業車",
+        "スタッフ",
+        "アンテナ工事",
+        "出張",
+        "緊急",
+        "スピード"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/05/202605141057_wp_1778725595.jpg",
+      "source": "便利屋",
+      "genre": "antenna",
+      "genre_label": "アンテナ工事",
+      "addition_file": "街角アンテナ工事相談所.txt",
+      "addition_key": "街角アンテナ工事相談所",
+      "memo": "スピード対応・駆けつけ",
+      "created_at": "2026-05-14 11:26:36"
+    },
+    {
+      "keywords": [
+        "見積もり",
+        "料金",
+        "明朗会計",
+        "説明",
+        "相談",
+        "追加料金",
+        "タブレット",
+        "アンテナ工事"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/05/202605141058_wp_1778725596.jpg",
+      "source": "便利屋",
+      "genre": "antenna",
+      "genre_label": "アンテナ工事",
+      "addition_file": "街角アンテナ工事相談所.txt",
+      "addition_key": "街角アンテナ工事相談所",
+      "memo": "明朗会計・見積もり提示",
+      "created_at": "2026-05-14 11:26:37"
+    },
+    {
+      "keywords": [
+        "台風",
+        "火災保険",
+        "アンテナ修理",
+        "傾き",
+        "屋根",
+        "被害",
+        "写真撮影",
+        "自然災害"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/05/202605141059_wp_1778725597.jpg",
+      "source": "便利屋",
+      "genre": "antenna",
+      "genre_label": "アンテナ工事",
+      "addition_file": "街角アンテナ工事相談所.txt",
+      "addition_key": "街角アンテナ工事相談所",
+      "memo": "台風被害と火災保険サポート",
+      "created_at": "2026-05-14 11:26:39"
+    },
+    {
+      "keywords": [
+        "テレビ視聴",
+        "家族",
+        "解決後",
+        "快適",
+        "リビング",
+        "地デジ",
+        "映像",
+        "安心"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/05/Japanese_woman_comparing_phone_s-_202605141116_wp_1778725599.jpg",
+      "source": "便利屋",
+      "genre": "antenna",
+      "genre_label": "アンテナ工事",
+      "addition_file": "街角アンテナ工事相談所.txt",
+      "addition_key": "街角アンテナ工事相談所",
+      "memo": "解決後の快適な視聴",
+      "created_at": "2026-05-14 11:26:40"
+    },
+    {
+      "keywords": [
+        "スタッフ",
+        "信頼",
+        "相談",
+        "まとめ",
+        "問い合わせ",
+        "住宅",
+        "アンテナ工事",
+        "安心"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/05/Japanese_woman_comparing_phone_s-_202605141116-1_wp_1778725600.jpg",
+      "source": "便利屋",
+      "genre": "antenna",
+      "genre_label": "アンテナ工事",
+      "addition_file": "街角アンテナ工事相談所.txt",
+      "addition_key": "街角アンテナ工事相談所",
+      "memo": "サービス総合・まとめ",
+      "created_at": "2026-05-14 11:26:41"
+    },
+    {
+      "keywords": [
+        "業者比較",
+        "口コミ",
+        "評判",
+        "スマホ",
+        "比較検討",
+        "選び方",
+        "アンテナ工事",
+        "相談"
+      ],
+      "url": "https://benriya-otasuke.jp/wp-content/uploads/2026/05/Japanese_woman_comparing_phone_s-_202605141124_wp_1778725601.jpg",
+      "source": "便利屋",
+      "genre": "antenna",
+      "genre_label": "アンテナ工事",
+      "addition_file": "街角アンテナ工事相談所.txt",
+      "addition_key": "街角アンテナ工事相談所",
+      "memo": "業者比較・スマホ検索",
+      "created_at": "2026-05-14 11:26:42"
+    },
+    {
+      "keywords": [
+        "婚活",
+        "期待",
+        "不安",
+        "一歩",
+        "始める"
+      ],
+      "url": "https://www.marriage-mr.com/wp-content/uploads/2025/09/Image_fx-14-1.jpg",
+      "source": "結びのマリッジ",
+      "addition_file": "リングベルライト.txt",
+      "addition_key": "リングベルライト",
+      "genre_label": "リングベルライト",
+      "genre": "ringuberuraito",
+      "memo": " / サイト共通画像セット（旧登録） から流用",
+      "created_at": "2026-05-20 18:44:19"
+    },
+    {
+      "keywords": [
+        "戦略",
+        "仕組み",
+        "計画",
+        "準備",
+        "分析"
+      ],
+      "url": "https://www.marriage-mr.com/wp-content/uploads/2025/09/Image_fx-15-1.jpg",
+      "source": "結びのマリッジ",
+      "addition_file": "リングベルライト.txt",
+      "addition_key": "リングベルライト",
+      "genre_label": "リングベルライト",
+      "genre": "ringuberuraito",
+      "memo": " / サイト共通画像セット（旧登録） から流用",
+      "created_at": "2026-05-20 18:44:19"
+    },
+    {
+      "keywords": [
+        "プロ",
+        "サポート",
+        "カウンセラー",
+        "相談",
+        "信頼"
+      ],
+      "url": "https://www.marriage-mr.com/wp-content/uploads/2025/09/Image_fx-16-1-1.jpg",
+      "source": "結びのマリッジ",
+      "addition_file": "リングベルライト.txt",
+      "addition_key": "リングベルライト",
+      "genre_label": "リングベルライト",
+      "genre": "ringuberuraito",
+      "memo": " / サイト共通画像セット（旧登録） から流用",
+      "created_at": "2026-05-20 18:44:19"
+    },
+    {
+      "keywords": [
+        "お見合い",
+        "出会い",
+        "初対面",
+        "成功",
+        "デート"
+      ],
+      "url": "https://www.marriage-mr.com/wp-content/uploads/2025/09/Image_fx-17-1-1.jpg",
+      "source": "結びのマリッジ",
+      "addition_file": "リングベルライト.txt",
+      "addition_key": "リングベルライト",
+      "genre_label": "リングベルライト",
+      "genre": "ringuberuraito",
+      "memo": " / サイト共通画像セット（旧登録） から流用",
+      "created_at": "2026-05-20 18:44:19"
+    },
+    {
+      "keywords": [
+        "比較",
+        "検討",
+        "選択",
+        "多様",
+        "方法"
+      ],
+      "url": "https://www.marriage-mr.com/wp-content/uploads/2025/09/Image_fx-18-1.jpg",
+      "source": "結びのマリッジ",
+      "addition_file": "リングベルライト.txt",
+      "addition_key": "リングベルライト",
+      "genre_label": "リングベルライト",
+      "genre": "ringuberuraito",
+      "memo": " / サイト共通画像セット（旧登録） から流用",
+      "created_at": "2026-05-20 18:44:19"
+    },
+    {
+      "keywords": [
+        "料金",
+        "プラン",
+        "透明性",
+        "費用",
+        "価格"
+      ],
+      "url": "https://www.marriage-mr.com/wp-content/uploads/2025/09/Image_fx-19-1.jpg",
+      "source": "結びのマリッジ",
+      "addition_file": "リングベルライト.txt",
+      "addition_key": "リングベルライト",
+      "genre_label": "リングベルライト",
+      "genre": "ringuberuraito",
+      "memo": " / サイト共通画像セット（旧登録） から流用",
+      "created_at": "2026-05-20 18:44:19"
+    },
+    {
+      "keywords": [
+        "幸せ",
+        "未来",
+        "パートナーシップ",
+        "理想",
+        "結婚",
+        "default_image"
+      ],
+      "url": "https://www.marriage-mr.com/wp-content/uploads/2025/09/Image_fx-21-1.jpg",
+      "source": "結びのマリッジ",
+      "addition_file": "リングベルライト.txt",
+      "addition_key": "リングベルライト",
+      "genre_label": "リングベルライト",
+      "genre": "ringuberuraito",
+      "memo": " / サイト共通画像セット（旧登録） から流用",
+      "created_at": "2026-05-20 18:44:19"
+    }
+  ]
+}
