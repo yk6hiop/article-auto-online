@@ -42,12 +42,16 @@ def collect_deployment_readiness() -> dict[str, Any]:
             else "公開対象ファイルに実キーらしき文字列があります: " + ", ".join(leaked[:5]),
         )
     )
+    is_railway = bool(os.environ.get("RAILWAY_PROJECT_ID") or os.environ.get("RAILWAY_SERVICE_ID"))
+    has_git = (PROJECT_ROOT / ".git").exists()
     items.append(
         ReadinessItem(
             "Gitリポジトリ",
-            "ok" if (PROJECT_ROOT / ".git").exists() else "warn",
+            "ok" if has_git or is_railway else "warn",
             "Gitリポジトリです。"
-            if (PROJECT_ROOT / ".git").exists()
+            if has_git
+            else "Railway上では.gitが含まれないため、GitHub連携済みデプロイとして扱います。"
+            if is_railway
             else "まだGitリポジトリではありません。GitHub連携型PaaSではGit化とリモート登録が必要です。",
         )
     )
