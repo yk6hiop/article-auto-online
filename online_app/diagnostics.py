@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from .config import ONLINE_APP_DATA_DIR, PROJECT_ROOT
+from .config import ONLINE_APP_DATA_DIR, PROJECT_ROOT, RESUME_DIR
 from .runtime_config import apply_environment_overrides
 
 
@@ -74,7 +74,7 @@ def collect_diagnostics() -> dict[str, Any]:
     for label, path in [
         ("プロンプトフォルダ", getattr(core, "PROMPT_BASE_DIR", "")),
         ("生成結果フォルダ", getattr(core, "GOOGLE_DRIVE_BASE", "")),
-        ("resume_data", PROJECT_ROOT / "resume_data"),
+        ("resume_data", RESUME_DIR),
         ("オンラインジョブ保存先", ONLINE_APP_DATA_DIR),
     ]:
         exists = _exists(path)
